@@ -1,12 +1,15 @@
+// Scores.
 let playerScore = 0;
 let computerScore = 0;
 
+// Gets the random computer choice.
 function getComputerChoice(){
   let choices = ["rock", "paper", "scissors"];
   let random = Math.floor(Math.random() * choices.length);
   return choices[random];
 }
 
+// Plays a round and increases the score of the winner of the round by 1.
 function playRound(playerSelection, computerSelection){
   if(playerSelection == "rock"){
     if(computerSelection == "rock"){
@@ -47,8 +50,8 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
-function game(){
-  
+// Main game loop that displays the score and the winner.
+function game(){ 
   while(playerScore < 5 && computerScore < 5){
     const playerSelection = prompt("Enter your choice: ").toLowerCase();
     const computerSelection = getComputerChoice();
@@ -66,4 +69,5 @@ function game(){
   }
 }
 
+//Calling the game function.
 game();
