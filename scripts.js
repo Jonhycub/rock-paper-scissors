@@ -50,24 +50,47 @@ function playRound(playerSelection, computerSelection){
   }
 }
 
-// Main game loop that displays the score and the winner.
-function game(){ 
-  while(playerScore < 5 && computerScore < 5){
-    const playerSelection = prompt("Enter your choice: ").toLowerCase();
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
+//Event listeners for the rock, paper and scissors buttons. When clicked a round is played with the correct playerSelection.
+const buttonRock = document.querySelector('#rock');
+buttonRock.addEventListener('click', () =>{
+    playerSelection = 'rock';
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+  });
 
-    console.log("Your score is: " + playerScore);
-    console.log("The computer's score is: " + computerScore);
-  }
-  if(playerScore == 5 && computerScore == 5){
-    alert("It's a tie!");
-  }else if(playerScore == 5){
-    alert("You win!");
-  }else{
-    alert("You lose!");
-  }
-}
+const buttonPaper = document.querySelector('#paper');
+buttonPaper.addEventListener('click', () =>{
+    playerSelection = 'paper';
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+  });  
+
+const buttonScissors = document.querySelector('#scissors');
+buttonScissors.addEventListener('click', () =>{
+    playerSelection = 'scissors';
+    computerSelection = getComputerChoice();
+    playRound(playerSelection, computerSelection);
+  });
+
+
+// Main game loop that displays the score and the winner.
+// function game(){ 
+//   while(playerScore < 5 && computerScore < 5){
+//     const playerSelection = prompt("Enter your choice: ").toLowerCase();
+//     const computerSelection = getComputerChoice();
+//     console.log(playRound(playerSelection, computerSelection));
+
+//     console.log("Your score is: " + playerScore);
+//     console.log("The computer's score is: " + computerScore);
+//   }
+//   if(playerScore == 5 && computerScore == 5){
+//     alert("It's a tie!");
+//   }else if(playerScore == 5){
+//     alert("You win!");
+//   }else{
+//     alert("You lose!");
+//   }
+// }
 
 //Calling the game function.
-game();
+// game();
