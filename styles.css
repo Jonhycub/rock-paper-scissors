@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.container{
+  height: 100vh;
+  width: 100vw;
+  background-color:#222831;
+}
+
+.header{
+  background-color: #111720;
+  text-align: center;
+  padding: 50px;
+  font-family: "Rubik Vinyl", sans-serif;
+  font-size: 65px;
+  word-spacing: 12px;
+  color: #8dce15;
+}
+
+button{
+  width: 200px;
+  height: 200px;
+  margin: 40px 60px;
+  background-color: #32373d;;
+  border: transparent;
+  border-radius: 20px;
+}
+
+.button-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px;
+}
+
+.result-container{
+  color: white;
+  font-size: 40px;
+  text-align: center;
+  margin: 40px;
+}
+
+.score-container{
+  text-align: center;
+  margin: 40px;
+}
+
+#player-score, #computer-score{
+  color: white;
+  margin: 40px;
+  padding: 20px;
+  font-size: 60px;
+}
+
